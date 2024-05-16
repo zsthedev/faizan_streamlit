@@ -14,10 +14,10 @@ model = RandomForestRegressor(n_estimators=100, random_state=42)
 model.fit(X, y)
 
 # Page title and layout
-st.set_page_config(page_title="Flyash Predictor", page_icon=":chart_with_upwards_trend:", layout="wide")
+st.set_page_config(page_title="The Ash Oracle", page_icon=":chart_with_upwards_trend:", layout="wide")
 
 # Header
-st.title("Flyash Predictor")
+st.title("The Ash Oracle")
 st.write("Predict the flyash outputs based on chemical inputs.")
 
 # Sidebar
@@ -27,7 +27,7 @@ for i in range(11):
     input_values.append(st.sidebar.number_input(f"Chemical {i+1}", value=0.0, step=0.1))
 
 # Button to calculate
-if st.sidebar.button("Calculate", key="calculate_button"):
+if st.sidebar.button("Predict", key="calculate_button"):
     # Validate input values
     if all(input_values):
         # Predict flyash outputs
